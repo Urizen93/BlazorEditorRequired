@@ -1,0 +1,9 @@
+﻿@page "/"
+
+@* TODO It's required non-nullable property, and it initialized with null. And yet, rider is silent about it
+It might be nullable reference, if we are for a more realistic case *@
+<Dummy ViewModel="@null"/>
+
+@* TODO: here should be a warning
+Yes, this waring actually exists in build report, but it would be nice to see it highlighted right here  *@
+<Dummy/>

@@ -1,0 +1,12 @@
+﻿<h3>Dummy</h3>
+
+@code {
+    // TODO we've marked this one as EditorRequired and it is also explicitly non-nullable (nullability warnings are enabled),
+    // hence caller should be warned
+    // 1) unless this property is provided
+    // 2) if reference he provides is considered nullable
+    // Therefore, there is no need for this nullability warning right here - if property is not set up correctly,
+    // there will be a warning on call site where it actually belongs
+    [Parameter, EditorRequired]
+    public ViewModel ViewModel { get; set; }
+}
